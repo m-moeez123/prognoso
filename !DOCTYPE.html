@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prognoso Assistant</title>
+</head>
+<body>
+  <h1>Welcome to Prognoso</h1>
+  <p>Interact with our AI assistant below:</p>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "b331cf5a-95a6-404b-a601-f9def6b204a4", // Your integration ID
+      region: "us-south", // Your region
+      serviceInstanceID: "683fc00e-9fec-4384-9295-0a1766e92433", // Your service instance ID
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
